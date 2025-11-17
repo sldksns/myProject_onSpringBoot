@@ -1,12 +1,26 @@
 package org.example.bestsite.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "users")
 public class Account {
+    @Column(name = "u_name")
     private String name;
+    @Column(name = "u_lname")
     private String lastname;
+    @Column(name = "u_desc")
     private String description;
+    @Column(
+            name = "u_email",
+            unique = true
+    )
     private String email;
+    @Column(name = "u_pnumber")
     private String phonenumber;
-    private long ID;
+    @Id
+    @GeneratedValue
+    private Integer ID;
 
     public Account(String name, String lastname, String description, String email, String phonenumber) {
         this.name = name;
@@ -14,6 +28,9 @@ public class Account {
         this.description = description;
         this.email = email;
         this.phonenumber = phonenumber;
+    }
+
+    public Account() {
     }
 
     public String getName() {
@@ -36,7 +53,7 @@ public class Account {
         return this.phonenumber;
     }
 
-    public long getID() {
+    public Integer getID() {
         return this.ID;
     }
 
@@ -60,7 +77,7 @@ public class Account {
         this.phonenumber = phonenumber;
     }
 
-    public void setID(long ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -86,7 +103,9 @@ public class Account {
         final Object other$phonenumber = other.getPhonenumber();
         if (this$phonenumber == null ? other$phonenumber != null : !this$phonenumber.equals(other$phonenumber))
             return false;
-        if (this.getID() != other.getID()) return false;
+        final Object this$ID = this.getID();
+        final Object other$ID = other.getID();
+        if (this$ID == null ? other$ID != null : !this$ID.equals(other$ID)) return false;
         return true;
     }
 
@@ -107,8 +126,8 @@ public class Account {
         result = result * PRIME + ($email == null ? 43 : $email.hashCode());
         final Object $phonenumber = this.getPhonenumber();
         result = result * PRIME + ($phonenumber == null ? 43 : $phonenumber.hashCode());
-        final long $ID = this.getID();
-        result = result * PRIME + (int) ($ID >>> 32 ^ $ID);
+        final Object $ID = this.getID();
+        result = result * PRIME + ($ID == null ? 43 : $ID.hashCode());
         return result;
     }
 
