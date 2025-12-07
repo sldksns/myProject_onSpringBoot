@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-mainColor text-white bg-stone-900">
+    <header class=" mx-auto bg-red-500 w-full fixed">
+        <div class="flex justify-around pb-5 pt-5">
+            <div class=" ">
+                <button class=" right-0 top-0 h-full px-4 bg-stone-800 text-white rounded-lg hover:bg-stone-900">Добавить товар</button>
+            </div>
+            <div class="">
+                <span class="w-10 h-10"><img src="../static/img/ico.png"></span>
+            </div>
+            <div class="flex justify-center relative pr- w-200">
+                <input class="w-full pl-4 pr-20 py-3 border rounded hover:border-stone-800 type="text placeholder="Поиск товаров" />
+                <button class="absolute right-0 top-0 h-full px-4 bg-stone-800 text-white rounded-lg hover:bg-stone-900">Нажать</button>
+            </div>
+            <div class="flex h-10 justify-start w-30">
+                <span class="text-2xl"><img class="" src="../static/img/default.png"></span>
+                <p class="pt-3">Admin</p>
+            </div>
+
+        </div>
+    </header>
+    <main class="w-full mx-auto pt-40">
+        <div class="flex justify-around pl-60 grid grid-cols-4 gap-x-20 gap-y-10">
+            <div class="">
+                <img src="../static/img/ico.png">
+                <span >Название продукта</span><br>
+                <span >Цена</span>
+            </div>
+            <div class="">
+                <img src="../static/img/ico.png">
+                <span >Название продукта</span><br>
+                <span >Цена</span>
+            </div>
+            <div class="">
+                <img src="../static/img/ico.png">
+                <span >Название продукта</span><br>
+                <span >Цена</span>
+            </div>
+            <div class="">
+                <img src="../static/img/ico.png">
+                <span >Название продукта</span><br>
+                <span >Цена</span>
+            </div>
+        </div>
+    </main>
+    <footer class="flex bg-stone-1000 text-white justify-around pt-200 w-full mx-auto">
+        <div class="text-2xl ">© 2023</div>
+        <div class="text-2xl ">Contacts:</div>
+    </footer>
+</body>
+</html>
