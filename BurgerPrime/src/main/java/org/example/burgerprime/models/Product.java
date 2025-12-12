@@ -6,6 +6,10 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+import java.util.Base64;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Entity
 @Table(name = "products")
 @Data
@@ -16,7 +20,5 @@ public class Product {
     private String name;
     private Double price;
     private String description;
-    private String imageUrl;
     private String category;
-    private Integer count;
 }
